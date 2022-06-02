@@ -1,5 +1,10 @@
 # How to use Pusher in Laravel Broadcast
 
+## What is Pusher ?
+[Pusher](https://pusher.com) is hosted API service to have Real Time Experience such as (Chat, Notification, etc.) without needing to refresh your website.
+
+---
+
 In this example, I will use Pusher with _AlpineJS_ !
 
 
@@ -8,10 +13,14 @@ In **cmd**,
 ```
 composer require pusher/pusher-php-server
 ```
-**env** file
+In **env** file,
+default *BROADCAST_DRIVER* is *log*.
+Modify it to ...
 ```
 BROADCAST_DRIVER=pusher
 ```
+And add Pusher App keys in **env** file.<br>
+_(If you don't have Pusher App keys, Creat Account in [Pusher](https://pusher.com).<br>[Click Here](./PusherSignUpManual/README.md) to see how to create Free Account in [Pusher](https://pusher.com) to use)_
 ```
 PUSHER_APP_ID=your-pusher-app-id
 PUSHER_APP_KEY=your-pusher-key
