@@ -31,6 +31,20 @@ class LoginRequest extends FormRequest
         return [
             'email' => ['required', 'string', 'email'],
             'password' => ['required', 'string'],
+            'remember' => ['nullable', 'boolean'],
+            'g-recaptcha-response' => ['required', 'captcha'],
+        ];
+    }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return [
+            'g-recaptcha-response' => "\"I'm not a robot\"",
         ];
     }
 

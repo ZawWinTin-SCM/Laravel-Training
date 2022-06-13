@@ -24,5 +24,5 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/post/{id}', [PostController::class, 'show'])->middleware(['auth'])->name('post.show');
-Route::post('/post/vote', [PostController::class, 'vote'])->middleware(['auth'])->name('post.vote');
+Route::get('/post/{id}', [PostController::class, 'show'])->name('post.show');
+Route::post('/post/vote', [PostController::class, 'vote'])->name('post.vote');
