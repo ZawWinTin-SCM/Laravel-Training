@@ -16,3 +16,5 @@ cd C:\Users\ZawWinTin\OneDrive\Desktop\PostComment\example-app && php artisan sc
 
 @REM * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
 @REM https://cronexpressiontogo.com/ [Link for five asterisks]
+
+@REM docker exec -it container_name php artisan schedule:run > "NUL" 2>&1 
